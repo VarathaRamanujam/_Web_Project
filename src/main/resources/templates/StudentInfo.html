@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table>
+<tr>
+<th>STUDENT_REGISTATION_NUMBER</th>
+<th>STUDENT_NAME</th>
+<th>STUDENT_DOB</th>
+<th>STUDENT_PHONE_NUMBER</th>
+</tr>
+<tr th:each="ls":${ls}">
+<td th:text="${ls.getRegisterNumber()}"></td>
+<td th:text="${ls.getName()}"></td>
+<td th:text="${ls.getDob()}"></td>
+<td th:text="${ls.getPhoneNumber()}"></td>
+</table>
+</body>
+</html>
