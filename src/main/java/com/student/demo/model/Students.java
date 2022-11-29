@@ -30,6 +30,7 @@ public class Students implements Serializable {
     private String     name ;
 
     @Temporal(TemporalType.DATE)
+    @GeneratedValue(strategy=GenerationType.SEQUENCE)
     @Column(name="dob")
     private Date       dob ;
 
@@ -41,12 +42,33 @@ public class Students implements Serializable {
 
     /**
      * Constructor
+     * @param phonenumber2 
+     * @param registerNumber2 
+     * @param name2 
+     * @param phonenumber2 
+     * @param dob2 
+     * @param name2 
      */
     public Students() {
-		super();
+	
     }
     
-    //--- GETTERS & SETTERS FOR FIELDS
+    
+
+
+//	public Students(String name2, Date dob2, String phonenumber2) {
+//		// TODO Auto-generated constructor stub
+//	}
+
+
+	public Students(String name, int registerNumber, String phoneNumber) {
+		this.name = name;
+		this.phoneNumber = phoneNumber;
+		this.registerNumber=registerNumber;
+	}
+
+
+	//--- GETTERS & SETTERS FOR FIELDS
     public void setRegisterNumber( Integer registerNumber ) {
         this.registerNumber = registerNumber ;
     }

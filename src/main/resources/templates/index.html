@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+        h4{text-align: left;}
+        h3{color:black;}
+    </style>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-<form action="addUser">
-<label> Enter Your Register Number  </label> <input type="text" name ="registerNo">
-<label> Enter Your Name  </label> <input type="text" name ="name">
-<button type="submit">SHOW</button>
-</form>
+<title>Student Login</title>
+ <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700'><link rel="stylesheet" href="./style.css">
 
+</head>
+<body style="background-color:rgb(70, 87, 83);color:aliceblue;"> 
+   <div class="login-form">
+<form action="addUser">
+
+    <div class="content">
+      <div class="input-field">
+Enter Your Register Number :<input type="text" name ="registerNo" placeholder="Register Number" autocomplete="nope">
+      </div>
+      <div class="input-field">
+Date Of Birth  : <input type="date" name ="name" placeholder="Date Of Birth" autocomplete="new-password">
+      </div>
+<button type="submit">LogIn</button>
+      <div>
+      
+       <a href="http://localhost:8080/createUsers" class="Creating a New User"> <h4 style="color:black">New User? </h4></a>
+      </div>
+      <div>
+      <a href="http://localhost:8080/deleteUsers" class="Delete the User Details"><h4 style="color:black">Delete User?</h4></a>
+      </div>  
+    </div>
+</form>
+   </div>
 </body>
 </html>

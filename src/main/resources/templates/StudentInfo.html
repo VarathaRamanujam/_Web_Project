@@ -1,22 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+}
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Candidate Information</title>
 </head>
+<center>
 <body>
-<table>
-<tr>
-<th>STUDENT_REGISTATION_NUMBER</th>
-<th>STUDENT_NAME</th>
-<th>STUDENT_DOB</th>
-<th>STUDENT_PHONE_NUMBER</th>
-</tr>
-<tr th:each="ls":${ls}">
-<td th:text="${ls.getRegisterNumber()}"></td>
-<td th:text="${ls.getName()}"></td>
-<td th:text="${ls.getDob()}"></td>
-<td th:text="${ls.getPhoneNumber()}"></td>
-</table>
+ <h2 style="background-color:rgb(20, 87, 83);color:aliceblue;" align="center">STUDENT INFORMATION</h2>
+ 
+<table style="background-color:white" " width:400px" class="center">
+
+            <tr>
+                <th>REGISTER NUMBER</th>
+                <th>NAME</th>
+                <th>DATE OF BIRTH</th>
+                <th>PHONE NUMBER</th>
+            </tr>
+            
+            <tr th:each="city : ${id}">
+                <td style="color:black" th:text="${city.registerNumber}">Id</td>
+                <td style="color:blue" th:text="${city.name}">Name</td>
+                <td style="color:black" th:text="${city.dob}">Population</td>
+                <td style="color:red" th:text="${city.phoneNumber}">Population</td>
+            </tr>
+              
+        </table>
+     
 </body>
+</center>
 </html>
